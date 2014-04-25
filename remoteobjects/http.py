@@ -37,7 +37,7 @@ import logging
 from remoteobjects.dataobject import DataObject, DataObjectMetaclass
 from remoteobjects import fields
 
-userAgent = httplib2.Http()
+userAgent = httplib2.Http(disable_ssl_certificate_validation=True)
 
 log = logging.getLogger('remoteobjects.http')
 
